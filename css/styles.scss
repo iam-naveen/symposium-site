@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    width: 100%;
+    height: 100vh;
 }
 
     .container{
@@ -24,7 +26,7 @@ body{
             align-items: center;
             justify-content: center;  
             text-align: center;
-            font-size: 4rem;
+            font-size: 2rem;
         }
         .hero{
             scroll-snap-align: end;
