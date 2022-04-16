@@ -15,7 +15,6 @@ body {
   width: 100%;
   height: 100vh;
   background-color: red;
-  scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -41,27 +40,31 @@ body {
 }
 
 .container .hero {
-  scroll-snap-align: end;
   background-color: yellow;
+  scroll-snap-align: start;
 }
 
 .container .body {
-  scroll-snap-align: start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  scroll-snap-align: start;
 }
 
 .container .events-tech {
   background-color: antiquewhite;
+  scroll-snap-align: start;
 }
 
 .container .events-nontech {
   background-color: aquamarine;
+  scroll-snap-align: start;
 }
 
 .container .contact {
   background-color: bisque;
+  height: 50vh;
+  scroll-snap-align: end;
 }
 /*# sourceMappingURL=styles.css.map */
