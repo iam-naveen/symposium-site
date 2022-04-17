@@ -19,17 +19,19 @@
 
     padding: 1rem 2.5rem;
     margin-top: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
 
     font-size: 1.5rem;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
     background-color: beige;
+    user-select: none;
+    
     &:hover{
         background-color: white;
     }
     &:active{
-        background-color: darkgray;
+        background-color: rgb(218, 218, 218);
     }
 
 }

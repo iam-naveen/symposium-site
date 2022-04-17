@@ -261,11 +261,15 @@ root {
 .register-button {
   padding: 1rem 2.5rem;
   margin-top: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 1rem;
   font-size: 1.5rem;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
   background-color: beige;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .register-button:hover {
@@ -273,14 +277,80 @@ root {
 }
 
 .register-button:active {
-  background-color: darkgray;
+  background-color: #dadada;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 5%;
+}
+
+.navbar .logo img {
+  width: 42px;
+  height: 55px;
+}
+
+.navbar .logo p {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.navbar .logo p::after {
+  content: ' 2022';
+  font-size: .7rem;
+}
+
+.navbar .nav-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 5%;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
   margin: 0;
   width: 100%;
   height: 100vh;
-  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body .container {
@@ -296,6 +366,7 @@ body .container {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  position: relative;
 }
 
 body .container section {

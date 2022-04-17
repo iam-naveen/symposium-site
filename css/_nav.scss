@@ -1,0 +1,44 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: fit-content;
+        height: fit-content;
+        padding: 0 5%;
+
+        img{
+            width: 42px;
+            height: 55px
+        }
+
+        p{
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            &::after{
+                content: ' 2022';
+                font-size: .7rem;
+            }
+        }
+    }
+
+    .nav-buttons{
+        display: flex;
+        gap: 1.5rem;
+        padding: 0 5%;
+        font-family: 'Work Sans', sans-serif;
+    }
+}
