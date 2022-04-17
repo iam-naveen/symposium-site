@@ -249,7 +249,7 @@
 
 @media only screen and (max-width: 650px) {
   .hero-content {
-    margin-top: 25vh;
+    margin-top: 20vh;
   }
 }
 
@@ -266,8 +266,8 @@
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  -webkit-box-shadow: 0px 5px #666;
-          box-shadow: 0px 5px #666;
+  -webkit-box-shadow: 0px 10px #666;
+          box-shadow: 0px 10px #666;
 }
 
 #register-button:hover, #register-button:focus {
@@ -278,10 +278,10 @@
 
 #register-button:active {
   background-color: beige;
-  -webkit-box-shadow: 0px 2px #666;
-          box-shadow: 0px 2px #666;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  -webkit-box-shadow: 0px 3px #666;
+          box-shadow: 0px 3px #666;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
