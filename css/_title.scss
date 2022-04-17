@@ -14,6 +14,9 @@
     margin-bottom: 0;
     margin-left: 5%;
     margin-right: 30px;
+    @media only screen and (max-width: 650px){
+        margin-top: 25vh;
+    }
 }
 .register-button{
 
@@ -26,12 +29,19 @@
     font-weight: 500;
     background-color: beige;
     user-select: none;
+    cursor: pointer;
     
     &:hover{
-        background-color: white;
+        background-color: orangered;
+        font-weight: 900;
     }
     &:active{
-        background-color: rgb(218, 218, 218);
+        background-color: orange;
+        font-weight: 900;
+    }
+    a{
+        text-decoration: none;
+        color: black;
     }
 
 }

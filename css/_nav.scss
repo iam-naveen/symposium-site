@@ -2,13 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media only screen and (max-width: 650px){
+        justify-content: space-between;
+    }
     min-height: 100px;
     width: 100%;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
+    .more-button{
+        display: none;
+        @media only screen and (max-width: 650px){
+            display: flex;
+            padding: 0px 30px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    
     .logo{
         display: flex;
         align-items: center;
@@ -28,17 +41,24 @@
             font-weight: 500;
             text-transform: uppercase;
             font-size: 1.2rem;
+            @media only screen and (max-width: 650px){
+                font-size: 1.5rem;
+            }
+            
             &::after{
                 content: ' 2022';
                 font-size: .7rem;
             }
         }
     }
-
+    
     .nav-buttons{
         display: flex;
         gap: 1.5rem;
         padding: 0 5%;
         font-family: 'Work Sans', sans-serif;
+        @media only screen and (max-width: 650px){
+            display: none;
+        }
     }
 }
