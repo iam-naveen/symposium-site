@@ -1,10 +1,289 @@
+root {
+  --time: 20s;
+  --amount: 5;
+  --fill: #56cbb9;
+}
+
+.tk-blob {
+  position: fixed;
+  top: 50%;
+}
+
+.tk-blob {
+  -webkit-animation: blob-turn var(--time, 30s) linear infinite;
+          animation: blob-turn var(--time, 30s) linear infinite;
+  fill: var(--fill, #7600f8);
+  position: relative;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.tk-blob svg {
+  -webkit-animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+          animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.tk-blob svg path {
+  -webkit-animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+          animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes blob-turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes blob-skew {
+  0% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  13% {
+    -webkit-transform: skewY(calc((1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  18% {
+    -webkit-transform: skewY(calc((2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  24% {
+    -webkit-transform: skewY(calc((2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  25% {
+    -webkit-transform: skewY(calc((2.5deg) * var(--amount, 2)));
+            transform: skewY(calc((2.5deg) * var(--amount, 2)));
+  }
+  26% {
+    -webkit-transform: skewY(calc((2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  32% {
+    -webkit-transform: skewY(calc((2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  37% {
+    -webkit-transform: skewY(calc((1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  50% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  63% {
+    -webkit-transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  68% {
+    -webkit-transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  74% {
+    -webkit-transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  75% {
+    -webkit-transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+  }
+  76% {
+    -webkit-transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  82% {
+    -webkit-transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  87% {
+    -webkit-transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  100% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+}
+
+@keyframes blob-skew {
+  0% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  13% {
+    -webkit-transform: skewY(calc((1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  18% {
+    -webkit-transform: skewY(calc((2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  24% {
+    -webkit-transform: skewY(calc((2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  25% {
+    -webkit-transform: skewY(calc((2.5deg) * var(--amount, 2)));
+            transform: skewY(calc((2.5deg) * var(--amount, 2)));
+  }
+  26% {
+    -webkit-transform: skewY(calc((2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+  32% {
+    -webkit-transform: skewY(calc((2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+  37% {
+    -webkit-transform: skewY(calc((1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+  50% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  63% {
+    -webkit-transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  68% {
+    -webkit-transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  74% {
+    -webkit-transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  75% {
+    -webkit-transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+  }
+  76% {
+    -webkit-transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+  82% {
+    -webkit-transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+            transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+  87% {
+    -webkit-transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+            transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+  100% {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+}
+
+@-webkit-keyframes blob-scale {
+  0% {
+    -webkit-transform: scaleX(0.9) scaleY(1);
+            transform: scaleX(0.9) scaleY(1);
+  }
+  25% {
+    -webkit-transform: scaleX(0.9) scaleY(0.9);
+            transform: scaleX(0.9) scaleY(0.9);
+  }
+  50% {
+    -webkit-transform: scaleX(1) scaleY(0.9);
+            transform: scaleX(1) scaleY(0.9);
+  }
+  75% {
+    -webkit-transform: scaleX(0.9) scaleY(0.9);
+            transform: scaleX(0.9) scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleX(0.9) scaleY(1);
+            transform: scaleX(0.9) scaleY(1);
+  }
+}
+
+@keyframes blob-scale {
+  0% {
+    -webkit-transform: scaleX(0.9) scaleY(1);
+            transform: scaleX(0.9) scaleY(1);
+  }
+  25% {
+    -webkit-transform: scaleX(0.9) scaleY(0.9);
+            transform: scaleX(0.9) scaleY(0.9);
+  }
+  50% {
+    -webkit-transform: scaleX(1) scaleY(0.9);
+            transform: scaleX(1) scaleY(0.9);
+  }
+  75% {
+    -webkit-transform: scaleX(0.9) scaleY(0.9);
+            transform: scaleX(0.9) scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleX(0.9) scaleY(1);
+            transform: scaleX(0.9) scaleY(1);
+  }
+}
+
+.title {
+  text-align: left;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  max-width: 840px;
+}
+
+.hero-content {
+  margin-top: 30vh;
+  margin-bottom: 0;
+  margin-left: 5%;
+  margin-right: 30px;
+}
+
+.register-button {
+  padding: 1rem 2.5rem;
+  margin-top: 1.5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  background-color: beige;
+}
+
+.register-button:hover {
+  background-color: white;
+}
+
+.register-button:active {
+  background-color: darkgray;
+}
+
 body {
   margin: 0;
   width: 100%;
   height: 100vh;
+  font-family: sans-serif;
 }
 
-.container {
+body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,13 +293,12 @@ body {
           flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: red;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-.container section {
+body .container section {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -29,22 +307,19 @@ body {
   display: flex;
   width: 100%;
   height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
   font-size: 2rem;
 }
 
-.container .hero {
+body .container .hero {
   background-color: yellow;
   scroll-snap-align: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.container .body {
+body .container .body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -52,17 +327,17 @@ body {
   scroll-snap-align: start;
 }
 
-.container .events-tech {
+body .container .events-tech {
   background-color: antiquewhite;
   scroll-snap-align: start;
 }
 
-.container .events-nontech {
+body .container .events-nontech {
   background-color: aquamarine;
   scroll-snap-align: start;
 }
 
-.container .contact {
+body .container .contact {
   background-color: bisque;
   height: 50vh;
   scroll-snap-align: end;
