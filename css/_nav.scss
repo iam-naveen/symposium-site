@@ -43,11 +43,17 @@
             font-size: 1.2rem;
             @media only screen and (max-width: 650px){
                 font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 1.5ch;
             }
             
             &::after{
                 content: ' 2022';
                 font-size: .7rem;
+                @media only screen and (max-width: 650px){
+                    font-size: 1rem;
+                    font-weight: 200;
+                }
             }
         }
     }

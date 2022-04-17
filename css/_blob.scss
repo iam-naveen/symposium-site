@@ -1,27 +1,19 @@
-root {
-    --time: 20s;
-    --amount: 5;
-    --fill: #56cbb9;
-  }
-
-  .tk-blob{
-    position: fixed;
-    top: 50%;
-  }
-  .tk-blob {
-    animation: blob-turn var(--time, 30s) linear infinite;
-    fill: var(--fill, #7600f8);
-    position: relative;
-    transform-origin: center;
-  }
-  .tk-blob svg {
-    animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
-    transform-origin: center;
-  }
-  .tk-blob svg path {
-    animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
-    transform-origin: center;
-  }
+.tk-blob {
+  animation: blob-turn var(--time, 30s) linear infinite;
+  fill: var(--fill, #7600f8);
+  position: relative;
+  transform-origin: center;
+}
+.tk-blob svg {
+  animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+  transform-origin: center;
+}
+.tk-blob svg path {
+  animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+  transform-origin: center;
+}  
+  
+  
   @keyframes blob-turn {
     0% {
       transform: rotate(0deg);
@@ -100,4 +92,3 @@ root {
       transform: scaleX(0.9) scaleY(1);
     }
   }
-  

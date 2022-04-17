@@ -1,14 +1,3 @@
-root {
-  --time: 20s;
-  --amount: 5;
-  --fill: #56cbb9;
-}
-
-.tk-blob {
-  position: fixed;
-  top: 50%;
-}
-
 .tk-blob {
   -webkit-animation: blob-turn var(--time, 30s) linear infinite;
           animation: blob-turn var(--time, 30s) linear infinite;
@@ -264,7 +253,7 @@ root {
   }
 }
 
-.register-button {
+#register-button {
   padding: 1rem 2.5rem;
   margin-top: 1.5rem;
   border-radius: 1rem;
@@ -277,19 +266,27 @@ root {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  -webkit-box-shadow: 0px 5px #666;
+          box-shadow: 0px 5px #666;
 }
 
-.register-button:hover {
-  background-color: orangered;
-  font-weight: 900;
+#register-button:hover, #register-button:focus {
+  background-color: white;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.register-button:active {
-  background-color: orange;
-  font-weight: 900;
+#register-button:active {
+  background-color: beige;
+  -webkit-box-shadow: 0px 2px #666;
+          box-shadow: 0px 2px #666;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.register-button a {
+#register-button a {
   text-decoration: none;
   color: black;
 }
@@ -369,12 +366,21 @@ root {
 @media only screen and (max-width: 650px) {
   .navbar .logo p {
     font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5ch;
   }
 }
 
 .navbar .logo p::after {
   content: ' 2022';
   font-size: .7rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar .logo p::after {
+    font-size: 1rem;
+    font-weight: 200;
+  }
 }
 
 .navbar .nav-buttons {
@@ -412,6 +418,7 @@ body .container {
           flex-direction: column;
   width: 100%;
   height: 100vh;
+  scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -425,20 +432,21 @@ body .container section {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100vh;
   scroll-snap-align: start;
 }
 
-body .container .hero {
+.hero {
+  position: relative;
   background-color: yellow;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 
-body .container .events-tech {
+.events-tech {
   background-color: antiquewhite;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -446,9 +454,10 @@ body .container .events-tech {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100vh;
 }
 
-body .container .events-nontech {
+.events-nontech {
   background-color: aquamarine;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -456,9 +465,10 @@ body .container .events-nontech {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100vh;
 }
 
-body .container .contact {
+.contact {
   background-color: bisque;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -466,6 +476,6 @@ body .container .contact {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
+  height: 60vh;
 }
 /*# sourceMappingURL=styles.css.map */
